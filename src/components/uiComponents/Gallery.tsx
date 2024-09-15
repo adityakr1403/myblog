@@ -13,6 +13,15 @@ interface GalleryProps {
 
 const Gallery = ({posts}: GalleryProps) => {
     const [galleryPosts, setGalleryPosts] = useState(posts);
+    const rotateRight = () => {
+        const newGalleryPosts: blogger_v3.Schema$Post[] = [galleryPosts?.at(-1) as blogger_v3.Schema$Post, ...galleryPosts?.slice(0, -1) ?? []];
+        setGalleryPosts(newGalleryPosts);
+        setGalleryPosts(newGalleryPosts);
+    }
+    const rotateLeft = () => {
+        const newGalleryPosts: blogger_v3.Schema$Post[] = [...galleryPosts?.slice(1) ?? [], galleryPosts?.at(0) as blogger_v3.Schema$Post];
+        setGalleryPosts(newGalleryPosts);
+    }
 
     return (
         <div className="flex flex-col p-4 ">
@@ -46,8 +55,8 @@ const Gallery = ({posts}: GalleryProps) => {
             <div className="flex justify-between">
                 {/*previous button*/}
                 <div className=" max-w-fit z-10">
-                    <div
-                        className="h-16 px-2 flex justify-center items-center border border-black text-xl text-gray-500">
+                    <div onClick={() => rotateLeft()}
+                         className="h-16 px-2 flex justify-center items-center border border-black text-xl text-gray-500">
                         <MdChevronLeft/>
                     </div>
                 </div>
@@ -71,8 +80,8 @@ const Gallery = ({posts}: GalleryProps) => {
                 </div>
                 {/*next button*/}
                 <div className="max-w-fit">
-                    <div
-                        className="h-16 px-2 flex justify-center items-center border border-black text-xl text-gray-500">
+                    <div onClick={() => rotateRight()}
+                         className="h-16 px-2 flex justify-center items-center border border-black text-xl text-gray-500">
                         <MdChevronRight/>
                     </div>
                 </div>

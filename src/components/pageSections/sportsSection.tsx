@@ -11,7 +11,7 @@ interface SportsSectionProps {
 }
 
 const SportsSection = ({postItemList}: SportsSectionProps) => {
-    let posts = postItemList?.items;
+    const posts = postItemList?.items;
     return (
         <section className="w-full">
             <div className="flex flex-col lg:flex-row">

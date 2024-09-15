@@ -1,7 +1,6 @@
 import React from 'react';
 import {blogger_v3} from "googleapis";
 import Gallery from "@/components/uiComponents/Gallery";
-import HorizontalBlogCard from "@/components/uiComponents/blogCards/horizontalBlogCard";
 import MiniHorizontalBlogCard from "@/components/uiComponents/blogCards/miniHorizontalBlogCard";
 
 interface HeroSectionProps {
@@ -9,7 +8,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({postItemList}: HeroSectionProps) => {
-    let posts = postItemList?.items;
+    const posts = postItemList?.items;
     return (
         <section className="flex justify-center w-full">
             {/*posts gallery*/}

@@ -10,7 +10,7 @@ interface InternationalSectionProps {
 }
 
 const InternationalSection = ({postItemList}: InternationalSectionProps) => {
-    let posts = postItemList?.items;
+    const posts = postItemList?.items;
     return (
         <section className="w-full">
             <div className="flex lg:justify-between flex-col lg:flex-row">

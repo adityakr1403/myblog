@@ -8,7 +8,7 @@ interface FeaturedSectionProps {
 }
 
 const FeaturedSection = ({postItemList}: FeaturedSectionProps) => {
-    let posts = postItemList?.items;
+    const posts = postItemList?.items;
     return (
         <section className="flex justify-center w-full">
             <div className="flex flex-col p-4 w-full">

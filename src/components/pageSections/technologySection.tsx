@@ -13,7 +13,7 @@ interface TechnologySectionProps {
 }
 
 const TechnologySection = ({postItemList}: TechnologySectionProps) => {
-    let posts = postItemList?.items;
+    const posts = postItemList?.items;
     return (
         <section>
             <div className="flex flex-col lg:flex-row ">

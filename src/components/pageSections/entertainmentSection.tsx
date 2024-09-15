@@ -9,7 +9,7 @@ interface EntertainmentSectionProps {
 }
 
 const EntertainmentSection = ({postItemList}: EntertainmentSectionProps) => {
-    let posts = postItemList?.items;
+    const posts = postItemList?.items;
     return (
         <section className="">
             <div className="flex flex-col lg:flex-row">

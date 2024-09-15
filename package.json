@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googleapis/blogger": "^1.1.7",
+    "@vercel/kv": "^2.0.0",
     "googleapis": "^144.0.0",
     "next": "14.2.11",
     "react": "^18",

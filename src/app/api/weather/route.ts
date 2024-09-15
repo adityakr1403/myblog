@@ -1,11 +1,4 @@
 import {NextRequest} from "next/server";
-
-type WeatherInfo = {
-    temp: number;
-    city: string;
-    icon: string;
-}
-
 const baseUrl = process.env.WEATHER_API_BASE_URL;
 
 const getWeatherInfo = async ({latitude, longitude}: { latitude: string, longitude: string }) => {

@@ -18,12 +18,24 @@ const WeatherComponent = () => {
     const [weatherInfo, setWeatherInfo] = useState({} as weatherInfo);
 
     useEffect(() => {
-        fetch('http://ip-api.com/json').then((response) => response.json()).then((data) => {
-            setGeoLocation({
-                latitude: data.lat,
-                longitude: data.lon
+        try {
+            fetch('http://ip-api.com/json').then((response) => response.json()).then((data) => {
+                setGeoLocation({
+                    latitude: data.lat,
+                    longitude: data.lon
+                });
             });
-        });
+        } catch (e) {
+            console.error(e);
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    setGeoLocation({
+                        latitude: position.coords.latitude,
+                        longitude: position.coords.longitude
+                    });
+                });
+            }
+        }
     }, []);
     useEffect(() => {
         // get the ip address of the server

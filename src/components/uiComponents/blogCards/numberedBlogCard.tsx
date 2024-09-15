@@ -24,7 +24,7 @@ const NumberedBlogCard = ({post, postNumber}: NumberedBlogCardProps) => {
                     className="transform rotate-[20deg]"> <RxSlash/> </span>&nbsp; <span
                     className="text-[#515A60]"> {getFormattedDate(post)} </span>
                 </div>
-                <div className="text-base text-[#17222B]">
+                <div className="text-base text-[#17222B] text-ellipsis line-clamp-2">
                     {post.title}
                 </div>
                 <div className="flex items-center justify-start gap-2 text-[#A9ADB1] text-xs">

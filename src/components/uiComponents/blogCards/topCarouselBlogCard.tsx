@@ -8,7 +8,7 @@ interface PostProps {
     post: blogger_v3.Schema$Post
 }
 
-const Post = ({post}: PostProps) => {
+const TopCarouselBlogCard = ({post}: PostProps) => {
     return (
         <div className="w-[350px] flex justify-between items-start gap-2 mx-4 shrink-0">
             {/*Image*/}
@@ -34,4 +34,4 @@ const Post = ({post}: PostProps) => {
         ;
 };
 
-export default Post;
+export default TopCarouselBlogCard;

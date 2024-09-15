@@ -4,7 +4,7 @@ import Image from "next/image";
 import {getDescription, getFormattedDate, getImageURL} from "@/blogUtils/blogCardUtils";
 
 interface BlogCardProps {
-    post: blogger_v3.Schema$Post
+    post?: blogger_v3.Schema$Post
 }
 
 const BlogCard = ({post}: BlogCardProps) => {

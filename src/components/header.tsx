@@ -1,6 +1,5 @@
 import React from 'react';
 import {IoNewspaperOutline} from "react-icons/io5";
-import {NextFont} from "next/dist/compiled/@next/font";
 import Link from "next/link";
 
 const Header = () => {

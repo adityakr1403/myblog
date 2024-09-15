@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import {TiWeatherSunny} from "react-icons/ti";
 
-type weatherInfo = {
+type WeatherInfo = {
     temp: number;
     city: string;
     icon: string;
@@ -15,7 +15,7 @@ type GeoLocation = {
 
 const WeatherComponent = () => {
     const [geoLocation, setGeoLocation] = useState({latitude: 28.7041, longitude: 77.1025} as GeoLocation);
-    const [weatherInfo, setWeatherInfo] = useState({} as weatherInfo);
+    const [weatherInfo, setWeatherInfo] = useState({} as WeatherInfo);
 
     useEffect(() => {
         try {

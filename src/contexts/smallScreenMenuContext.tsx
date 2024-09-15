@@ -2,9 +2,9 @@
 import React, {createContext, useState} from 'react';
 
 
-export const SmallScreenMenuContext = createContext({
-    menuIsOpen: true, setMenuIsOpen: (value: boolean) => {
-    }
+export const SmallScreenMenuContext = createContext({} as {
+    menuIsOpen: boolean,
+    setMenuIsOpen: (value: boolean) => void
 });
 
 const SmallScreenMenuProvider = ({children}: { children: React.ReactNode }) => {

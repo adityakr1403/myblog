@@ -9,7 +9,7 @@ const SmallScreenHamburgerMenu = () => {
         <div className="md:hidden mx-4">
             <div className="border w-11 h-11 flex justify-center items-center"
                  onClick={() => {
-                     setMenuIsOpen(true)
+                     setMenuIsOpen()
                  }}>
                 <GiHamburgerMenu className="text-2xl"/>
             </div>

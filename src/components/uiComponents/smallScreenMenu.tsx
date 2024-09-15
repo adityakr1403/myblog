@@ -17,7 +17,7 @@ const SmallScreenMenu = () => {
             {/*close button*/}
             <div className="">
                 <button className="text-white bg-black/50 p-4" onClick={() => {
-                    setMenuIsOpen(false)
+                    setMenuIsOpen()
                 }}><RiCloseLargeFill className="text-lg"/></button>
             </div>
             <div className="p-4 bg-white overflow-auto">
@@ -26,7 +26,7 @@ const SmallScreenMenu = () => {
                     {
                         headerMenuConfiguration.items.map((item, index) => {
                             return (
-                                <Link key={index} href={item.url} onClick={() => setMenuIsOpen(false)}
+                                <Link key={index} href={item.url} onClick={() => setMenuIsOpen()}
                                       className="flex items-center gap-2 p-2 justify-between">
                                     <div className="">{item.label}</div>
                                     {/*<div className="">{1 === 1 ? <LiaPlusSolid/> : <LiaMinusSolid/>}</div>*/}

@@ -6,6 +6,7 @@ import SmallScreenMenu from "@/components/uiComponents/smallScreenMenu";
 import TopBanner from "@/components/topBanner";
 import Header from "@/components/header";
 import HeaderMenu from "@/components/headerMenu";
+import Footer from "@/components/footer";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -40,6 +41,8 @@ export default function RootLayout({
             <Header/>
             <HeaderMenu/>
             {children}
+            <div className="lg:my-5"></div>
+            <Footer/>
             </body>
             </html>
         </SmallScreenMenuProvider>

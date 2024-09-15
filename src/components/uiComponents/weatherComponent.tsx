@@ -14,7 +14,7 @@ type GeoLocation = {
 }
 
 const WeatherComponent = () => {
-    const [geoLocation, setGeoLocation] = useState({latitude: 28.7041, longitude: 77.1025} as GeoLocation);
+    const [geoLocation, setGeoLocation] = useState({} as GeoLocation);
     const [weatherInfo, setWeatherInfo] = useState({} as WeatherInfo);
 
     useEffect(() => {
@@ -27,22 +27,18 @@ const WeatherComponent = () => {
             });
         } catch (e) {
             console.error(e);
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition((position) => {
-                    setGeoLocation({
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude
-                    });
-                });
-            }
+            setGeoLocation({
+                latitude: 28.7041,
+                longitude: 77.1025
+            });
         }
     }, []);
     useEffect(() => {
         // get the ip address of the server
-        const baseUrl = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
+        // const baseUrl = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
 
 
-        fetch(`${baseUrl}/api/weather`,
+        fetch(`/api/weather`,
             {
                 method: 'POST',
                 body: JSON.stringify(geoLocation),

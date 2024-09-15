@@ -19,7 +19,7 @@ const WeatherComponent = () => {
 
     useEffect(() => {
         try {
-            fetch('http://ip-api.com/json').then((response) => response.json()).then((data) => {
+            fetch('https://ipapi.co/json/').then((response) => response.json()).then((data) => {
                 setGeoLocation({
                     latitude: data.lat,
                     longitude: data.lon

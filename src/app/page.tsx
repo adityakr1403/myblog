@@ -8,7 +8,8 @@ import EntertainmentSection from "@/components/pageSections/entertainmentSection
 import SportsSection from "@/components/pageSections/sportsSection";
 import InternationalSection from "@/components/pageSections/internationalSection";
 
-export const revalidate = 60;
+// export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
     const auth = await authenticate();

@@ -38,7 +38,7 @@ const TechnologySection = ({postItemList}: TechnologySectionProps) => {
                         </div>
                     </div>
                     <hr className="my-1 mb-7 border border-dashed"/>
-                    <div className="flex flex-col lg:flex-row justify-between">
+                    <div className="flex flex-col lg:gap-10 lg:flex-row justify-between">
                         <div className="flex flex-col">
                             <MiniHorizontalBlogCard post={posts?.at(2)}/>
                             <hr className="my-4 border border-dashed"/>

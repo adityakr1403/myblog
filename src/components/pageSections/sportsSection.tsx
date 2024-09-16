@@ -67,7 +67,7 @@ const SportsSection = ({postItemList}: SportsSectionProps) => {
                 {/*right*/}
                 <div className="p-4">
                     <div className="flex justify-between pb-4">
-                        <div className="text-2xl font-semibold text-[#17222B] text-nowrap">Upcoming Matches</div>
+                        <div className="text-2xl font-semibold text-[#17222B] text-nowrap">Matches</div>
                         <div className="flex text-[#515A60]">
                             {/*left button*/}
                             <div className="text-4xl"><CiSquareChevLeft/></div>

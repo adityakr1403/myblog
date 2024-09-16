@@ -24,7 +24,7 @@ const InternationalSection = ({postItemList}: InternationalSectionProps) => {
                     </div>
                     <div className="flex flex-col gap-6">
                         {
-                            posts?.slice(0,5).map((post: blogger_v3.Schema$Post) => {
+                            posts?.slice(0,4).map((post: blogger_v3.Schema$Post) => {
                                 return <>
                                     <HorizontalBlogCard key={post.id}
                                                         post={post}/>
